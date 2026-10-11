@@ -40,54 +40,116 @@
                     </div>
                 </nav>
                 <!-- Hero Section -->
-                <div class="hero-section" id="hero-section">
-                    <div class="top-subheading">
-                        <p class="subheading-child">Safe Air, Right Care, <span class="everyday-text">Everyday</span>.</p>
-                    </div>
-                    <div class="top-heading">
-                        <h1 class="heading-child">Take Control<br><span class="your-day-text">of Your Day</span></h1>
-                    </div>
-                    <div class="top-description">
-                        <p class="description-child">HealthSync builds a personalized schedule of the safest hours to step outside, aligning with your specific medical conditions and atmospheric environment.</p>
-                    </div>
-                </div>
-                <!-- Hero Cards -->
-                <div class="parent-cards-and-circle-element" id="parent-cards-and-circle-element">
-                    <!-- Circle Element -->
-                    <div class="circle-element">
-                        <img src="./images/circle.svg" class="circle-child" alt="Decorative Circle Element" height="150" width="150">
-                    </div>
-                    <div class="top-cards">
-                        <div class="card-1">
-                            <h1 class="asthma">Asthma</h1>
+                <section class="screen active" id="screen-landing">
+                    <div class="hero-section" id="hero-section">
+                        <div class="top-subheading">
+                            <p class="subheading-child">Safe Air, Right Care, <span class="everyday-text">Everyday</span>.</p>
                         </div>
-                        <div class="card-2">
-                            <h1 class="migraine">Migraine</h1>
+                        <div class="top-heading">
+                            <h1 class="heading-child">Take Control<br><span class="your-day-text">of Your Day</span></h1>
+                        </div>
+                        <div class="top-description">
+                            <p class="description-child">HealthSync builds a personalized schedule of the safest hours to step outside, aligning with your specific medical conditions and atmospheric environment.</p>
                         </div>
                     </div>
-                    <div class="card-3">
-                        <h1 class="eczema">Eczema</h1>
+                    <!-- Hero Cards -->
+                    <div class="parent-cards-and-circle-element" id="parent-cards-and-circle-element">
+                        <!-- Circle Element -->
+                        <div class="circle-element">
+                            <img src="./images/circle.svg" class="circle-child" alt="Decorative Circle Element" height="150" width="150">
+                        </div>
+                        <div class="top-cards">
+                            <div class="card-1">
+                                <h1 class="asthma">Asthma</h1>
+                            </div>
+                            <div class="card-2">
+                                <h1 class="migraine">Migraine</h1>
+                            </div>
+                        </div>
+                        <div class="card-3">
+                            <h1 class="eczema">Eczema</h1>
+                        </div>
                     </div>
-                </div>
-                <!-- Dotted Line Separator -->
-                <div class="separator-element">
-                    <hr class="horizontal-dotted-line">
-                </div>
-                <!-- Let's Start Button -->
-                 <div class="lets-start-button">
-                    <button class="btn-primary" onclick="goTo('screen-setup-conditions')">Let&rsquo;s Start</button>
-                 </div>
-                </div>
-            <!-- Section 2 -->
-            <div class="step-1-section" id="step-1-section">
-                <!-- 
-                ==============
-                FILL CODE HERE
-                ==============
-                -->
-            </div>
+                    <!-- Dotted Line Separator -->
+                    <div class="separator-element">
+                        <hr class="horizontal-dotted-line">
+                    </div>
+                    <!-- Let's Start Button -->
+                    <div class="lets-start-button">
+                        <button class="btn-primary" onclick="goTo('screen-setup-conditions')">Let&rsquo;s Start</button>
+                    </div>
+                </section>
+                <!-- Section 2 -->
+                <section class="screen step-1-section" id="screen-setup-conditions">
+                    <!-- Top Text Content -->
+                    <div class="step-1-selection">
+                        <div class="top-text-content">
+                            <div class="step-label-parent">
+                                <p class="step-label">STEP 1</p>
+                            </div>
+                            <div class="step-1-heading-parent">
+                                <h1 class="step-1-heading">Which of these apply to you?</h1>
+                            </div>
+                            <div class="pick-one-parent">
+                                <h2 class="pick-one">Pick at least one. You can change this any time.</h2>
+                            </div>
+                        </div>
+                        <!-- Conditions Checkboxes -->
+                        <div class="check-list" id="conditions-list">
+                            <!-- Asthma Checkbox -->
+                            <label class="check-row-1">
+                                <input type="checkbox" data-value="asthma">
+                                <span class="box"></span>
+                                <span class="check-copy">
+                                    <span class="check-heading">Asthma</span><br>
+                                    <span class="check-subheading">Fine particulates, ozone, cold dry air, etc.</span><br>
+                                </span>
+                            </label>
+                            <!-- Migraine Checkbox -->
+                            <label class="check-row-2">
+                                <input type="checkbox" data-value="migraine">
+                                <span class="box"></span>
+                                <span class="check-copy">
+                                    <span class="check-heading">Migraine</span><br>
+                                    <span class="check-subheading">Barometric pressure, humidity, heat, pollen, etc.</span><br>
+                                </span>
+                            </label>
+                            <!-- Eczema Checkbox -->
+                            <label class="check-row-3">
+                                <input type="checkbox" data-value="eczema">
+                                <span class="box"></span>
+                                <span class="check-copy">
+                                    <span class="check-heading">Eczema / Atopic Dermatitis</span><br>
+                                    <span class="check-subheading">Low humidity, dry air, irritants, allergens, etc.</span><br>
+                                </span>
+                            </label>
+                            <!-- Heart-Related / Circulatory Checkbox -->
+                            <label class="check-row-4">
+                                <input type="checkbox" data-value="heart-related-condition">
+                                <span class="box"></span>
+                                <span class="check-copy">
+                                    <span class="check-heading">Heart-Related / Circulatory Condition</span><br>
+                                    <span class="check-subheading">Air pollution, temperature changes, stress, etc.</span><br>
+                                </span>
+                            </label>
+                            <!-- Other Conditions Checkbox -->
+                            <label class="check-row-5">
+                                <input type="checkbox" data-value="other">
+                                <span class="box"></span>
+                                <span class="check-copy">
+                                    <span class="check-heading">Other Condition</span><br>
+                                    <span class="check-subheading">Particulates with extreme heat, cold, etc.</span><br>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="step-1-selection-button">
+                            <button class="step-1-btn-primary" onclick="goTo('screen-setup-location')">Next</button>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
+    </div>
     <!-- JavaScript Link -->
     <script src="script.js"></script>
 </body>
