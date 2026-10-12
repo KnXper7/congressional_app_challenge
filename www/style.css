@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -329,7 +331,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    margin-bottom: 5.8rem;
+    margin-bottom: 7.025rem;
 }
 
 .check-row-1, .check-row-2, .check-row-3, .check-row-4, .check-row-5 {
@@ -339,6 +341,7 @@ button {
     width: 95%;
     corner-shape: squircle;
     background-color: #FFFFFF;
+    user-select: none;
 }
 
 .check-row-5 {
@@ -349,27 +352,75 @@ button {
 .check-heading {
     color: #1F1F1F;
     font-weight: 500;
-    margin-left: 0.35rem;
 }
 
 .check-subheading {
     font-size: 0.85rem;
     color: #737373;
-    margin-left: 1.3rem;
 }
 
 .check-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
     line-height: 1.35rem;
 }
 
-/* CODE FOR EXTRA CHECKBOXES CODE / MISC. (CHANGE THE CHECKBOX STYLES)*/
+.check-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    position: relative;
+}
+
+.check-row input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.box {
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid #9A9A9A;
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    position: relative;
+    transition: all 0.15s ease;
+}
+
+.check-row input:checked + .box {
+    background: #4F76FF;
+    border-color: #4F76FF;
+}
+
+.check-row input:checked + .box::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 4px;
+    height: 9px;
+    border: solid #FFFFFF;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.check-row input:focus-visible + .box {
+    outline: 2px solid #4F76FF;
+    outline-offset: 2px;
+}
 
 .step-1-selection-button {
     display: flex;
     justify-content: center;
     text-align: center;
     width: 100%;
-    margin-left: -0.6rem;
+    margin-left: -0.69rem;
+    margin-top: -0.30rem;
 }
 
 .step-1-btn-primary {
@@ -386,5 +437,156 @@ button {
 }
 
 .step-1-btn-primary:hover {
+    background-color: #3d63d3;
+}
+
+.step-2-selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: flex-start;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    width: 95%;
+}
+
+.step-label-parent {
+    margin-bottom: 0.5rem;
+}
+
+.step-label {
+    font-size: 1.05rem;
+    color: #838383;
+    font-weight: 500;
+    letter-spacing: 0.08rem;
+}
+
+.step-2-heading-parent {
+    margin-bottom: 1.5rem;
+}
+
+.step-2-heading {
+    font-size: 1.5rem;
+    color: #1A1A1A;
+    font-weight: 600;
+}
+
+.step-2-description-parent {
+    margin-bottom: 1.5rem;
+}
+
+.step-2-description {
+    font-size: 0.9rem;
+    color: #666666;
+    font-weight: 450;
+}
+
+/* FIX WIDTH */
+
+.step-2-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    width: 97%;
+}
+
+.step-2-field-label {
+    font-size: 1.05rem;
+    color: #838383;
+    font-weight: 500;
+    text-align: flex-start;
+}
+
+.step-2-input {
+    display: block;
+    width: 100%;
+    border-radius: 5rem;
+    border: 1.9px solid #C7C7C7;
+    background-color: #F0F0F0;
+    padding: 0.6rem 1rem;
+    margin-top: 0.7rem;
+    font-size: 1rem;
+}
+
+.or-parent-text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.or-text {
+    color: #808080;
+    font-size: 1.2rem;
+}
+
+.step-2-location-button {
+    margin-bottom: 21rem;
+}
+
+.step-2-btn-location {
+    border-style: none;
+    padding: 12px 24px;
+    background-color: #4F76FF;
+    color: #ffffff;
+    font-weight: 550;
+    font-size: 1.05rem;
+    border-radius: 1.5rem;
+    width: 85%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    width: 97%;
+}
+
+.step-2-btn-location:hover {
+    background-color: #3d63d3;
+}
+
+.step-2-selection-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: -1.8rem;
+    width: 100%;
+}
+
+.step-2-btn-back {
+    border-style: none;
+    padding: 12px 24px;
+    background-color: #b6c8ff;
+    color: #5c6c9e;
+    font-weight: 550;
+    font-size: 1.05rem;
+    border-radius: 1.5rem;
+    width: 85%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    width: 40%;
+}
+
+.step-2-btn-back:hover {
+    background-color: #9eb2ec;
+}
+
+.step-2-btn-next {
+    border-style: none;
+    padding: 12px 24px;
+    background-color: #4F76FF;
+    color: #ffffff;
+    font-weight: 550;
+    font-size: 1.05rem;
+    border-radius: 1.5rem;
+    width: 85%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    width: 54.8%
+}
+
+.step-2-btn-next:hover {
     background-color: #3d63d3;
 }

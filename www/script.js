@@ -40,3 +40,21 @@ document.addEventListener('click', (event) => {
         toggleMenu(false);
     }
 });
+
+// Location Permission Request
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    }
+}
+
+function showPosition(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    console.log("Location captured silently:", latitude, longitude);
+}
+
+function showError(error) {
+    console.log("User denied or error occurred.");
+}

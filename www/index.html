@@ -97,53 +97,91 @@
                         <!-- Conditions Checkboxes -->
                         <div class="check-list" id="conditions-list">
                             <!-- Asthma Checkbox -->
-                            <label class="check-row-1">
+                            <label class="check-row check-row-1">
                                 <input type="checkbox" data-value="asthma">
                                 <span class="box"></span>
                                 <span class="check-copy">
-                                    <span class="check-heading">Asthma</span><br>
-                                    <span class="check-subheading">Fine particulates, ozone, cold dry air, etc.</span><br>
+                                    <span class="check-heading">Asthma</span>
+                                    <span class="check-subheading">Fine particulates, ozone, cold dry air, etc.</span>
                                 </span>
                             </label>
                             <!-- Migraine Checkbox -->
-                            <label class="check-row-2">
+                            <label class="check-row check-row-2">
                                 <input type="checkbox" data-value="migraine">
                                 <span class="box"></span>
                                 <span class="check-copy">
-                                    <span class="check-heading">Migraine</span><br>
-                                    <span class="check-subheading">Barometric pressure, humidity, heat, pollen, etc.</span><br>
+                                    <span class="check-heading">Migraine</span>
+                                    <span class="check-subheading">Barometric pressure, humidity, heat, pollen, etc.</span>
                                 </span>
                             </label>
                             <!-- Eczema Checkbox -->
-                            <label class="check-row-3">
+                            <label class="check-row check-row-3">
                                 <input type="checkbox" data-value="eczema">
                                 <span class="box"></span>
                                 <span class="check-copy">
-                                    <span class="check-heading">Eczema / Atopic Dermatitis</span><br>
-                                    <span class="check-subheading">Low humidity, dry air, irritants, allergens, etc.</span><br>
+                                    <span class="check-heading">Eczema / Atopic Dermatitis</span>
+                                    <span class="check-subheading">Low humidity, dry air, irritants, allergens, etc.</span>
                                 </span>
                             </label>
                             <!-- Heart-Related / Circulatory Checkbox -->
-                            <label class="check-row-4">
+                            <label class="check-row check-row-4">
                                 <input type="checkbox" data-value="heart-related-condition">
                                 <span class="box"></span>
                                 <span class="check-copy">
-                                    <span class="check-heading">Heart-Related / Circulatory Condition</span><br>
-                                    <span class="check-subheading">Air pollution, temperature changes, stress, etc.</span><br>
+                                    <span class="check-heading">Heart-Related / Circulatory Condition</span>
+                                    <span class="check-subheading">Air pollution, temperature changes, stress, etc.</span>
                                 </span>
                             </label>
                             <!-- Other Conditions Checkbox -->
-                            <label class="check-row-5">
+                            <label class="check-row check-row-5">
                                 <input type="checkbox" data-value="other">
                                 <span class="box"></span>
                                 <span class="check-copy">
-                                    <span class="check-heading">Other Condition</span><br>
-                                    <span class="check-subheading">Particulates with extreme heat, cold, etc.</span><br>
+                                    <span class="check-heading">Other Condition</span>
+                                    <span class="check-subheading">Particulates with extreme heat, cold, etc.</span>
                                 </span>
                             </label>
                         </div>
+                        <!-- Next Button -->
                         <div class="step-1-selection-button">
                             <button class="step-1-btn-primary" onclick="goTo('screen-setup-location')">Next</button>
+                        </div>
+                    </div>
+                </section>
+                <!-- Section 3 -->
+                <section class="screen step-2-section" id="screen-setup-location">
+                    <div class="step-2-selection">
+                        <div class="top-text-content">
+                            <div class="step-label-parent">
+                                <p class="step-label">STEP 2</p>
+                            </div>
+                            <div class="step-2-heading-parent">
+                                <h1 class="step-2-heading">Where are you?</h1>
+                            </div>
+                            <div class="step-2-description-parent">
+                                <p class="step-2-description">Enter your city or ZIP code so HealthSync can look up your local air, directing it to the weather service and nowhere else.</p>
+                            </div>
+                        </div>
+                        <div class="step-2-form-container">
+                            <div class="step-2-form">
+                                <div class="step-2-form-row">
+                                    <label class="step-2-field-label" for="manual-city">Type a city or ZIP code</label>
+                                    <input class="step-2-input" type="text" id="manual-city" placeholder="e.g. Richmond, VA">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="or-parent-text">
+                            <h1 class="or-text">OR</h1>
+                        </div>
+                        <div class="step-2-location-button">
+                            <button class="step-2-btn-location" onclick="getLocation()">Use my location</button>
+                        </div>
+                        <!-- **IMPORTANT** -->
+                        <div class="step-2-error-message" id="location-display"></div>
+                        <!-- **IMPORTANT** -->
+                        <div class="step-2-selection-buttons">
+                            <button class="step-2-btn-back" onclick="goTo('screen-setup-conditions')">Back</button>
+                            <button class="step-2-btn-next" onclick="goTo('screen-setup-day')">Continue</button>
                         </div>
                     </div>
                 </section>
