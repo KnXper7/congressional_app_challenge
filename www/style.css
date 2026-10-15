@@ -293,7 +293,7 @@ button {
     text-align: flex-start;
     margin-top: 1.5rem;
     margin-left: 1rem;
-    width: 97%;
+    width: 95%;
 }
 
 .step-label-parent {
@@ -432,6 +432,7 @@ button {
     font-size: 1.05rem;
     border-radius: 1.5rem;
     width: 88%;
+    margin-left: 0.5rem;
     transition: all 0.3s ease;
     cursor: pointer;
 }
@@ -503,7 +504,7 @@ button {
     width: 100%;
     border-radius: 5rem;
     border: 1.9px solid #C7C7C7;
-    background-color: #F0F0F0;
+    background-color: rgb(233, 233, 233);
     padding: 0.6rem 1rem;
     margin-top: 0.7rem;
     font-size: 1rem;
@@ -549,11 +550,11 @@ button {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
-    margin-top: -1.8rem;
+    margin-top: -0.7rem;
     width: 100%;
 }
 
-.step-2-btn-back {
+.step-btn-back {
     border-style: none;
     padding: 12px 24px;
     background-color: #b6c8ff;
@@ -568,11 +569,11 @@ button {
     width: 40%;
 }
 
-.step-2-btn-back:hover {
+.step-btn-back:hover {
     background-color: #9eb2ec;
 }
 
-.step-2-btn-next {
+.step-btn-next {
     border-style: none;
     padding: 12px 24px;
     background-color: #4F76FF;
@@ -587,6 +588,71 @@ button {
     width: 54.8%
 }
 
-.step-2-btn-next:hover {
+.step-btn-next:hover {
     background-color: #3d63d3;
+}
+
+.step-3-selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: flex-start;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    width: 95%;
+}
+
+.step-3-heading-parent {
+    margin-bottom: 1.5rem;
+}
+
+.step-3-heading {
+    font-size: 1.5rem;
+    color: #1A1A1A;
+    font-weight: 600;
+}
+
+.step-3-description-parent {
+    margin-bottom: 1.5rem;
+}
+
+.step-3-description {
+    font-size: 0.9rem;
+    color: #666666;
+    font-weight: 450;
+}
+
+.step-3-form-inputs {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.step-3-selection-buttons {
+    margin-top: 21.85rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.step-3-field-label {
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    color: #838383;
+    font-weight: 500;
+    text-align: flex-start;
+    justify-content: flex-start;
+}
+
+.step-3-time-input {
+    display: block;
+    width: 97%;
+    border-radius: 5rem;
+    border: 1.9px solid #C7C7C7;
+    background-color: rgb(233, 233, 233);
+    padding: 0.6rem 1rem;
+    margin-top: 0.7rem;
+    font-size: 1rem;
 }

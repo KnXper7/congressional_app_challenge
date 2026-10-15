@@ -42,6 +42,7 @@
                 <!-- Hero Section -->
                 <section class="screen active" id="screen-landing">
                     <div class="hero-section" id="hero-section">
+                        <!-- Top Text Content -->
                         <div class="top-subheading">
                             <p class="subheading-child">Safe Air, Right Care, <span class="everyday-text">Everyday</span>.</p>
                         </div>
@@ -151,6 +152,7 @@
                 <!-- Section 3 -->
                 <section class="screen step-2-section" id="screen-setup-location">
                     <div class="step-2-selection">
+                        <!-- Top Text Content -->
                         <div class="top-text-content">
                             <div class="step-label-parent">
                                 <p class="step-label">STEP 2</p>
@@ -159,9 +161,10 @@
                                 <h1 class="step-2-heading">Where are you?</h1>
                             </div>
                             <div class="step-2-description-parent">
-                                <p class="step-2-description">Enter your city or ZIP code so HealthSync can look up your local air, directing it to the weather service and nowhere else.</p>
+                                <p class="step-2-description">Enter your city or ZIP code so we can look up your local air, directing it to the weather service and nowhere else.</p>
                             </div>
                         </div>
+                        <!-- **Location Input / Information** -->
                         <div class="step-2-form-container">
                             <div class="step-2-form">
                                 <div class="step-2-form-row">
@@ -170,19 +173,73 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- OR Separator Text -->
                         <div class="or-parent-text">
                             <h1 class="or-text">OR</h1>
                         </div>
+                        <!-- **JavaScript-Controlled Get Location Button** -->
                         <div class="step-2-location-button">
                             <button class="step-2-btn-location" onclick="getLocation()">Use my location</button>
                         </div>
                         <!-- **IMPORTANT** -->
                         <div class="step-2-error-message" id="location-display"></div>
                         <!-- **IMPORTANT** -->
+                        <!-- Back and Next Buttons -->
                         <div class="step-2-selection-buttons">
-                            <button class="step-2-btn-back" onclick="goTo('screen-setup-conditions')">Back</button>
-                            <button class="step-2-btn-next" onclick="goTo('screen-setup-day')">Continue</button>
+                            <button class="step-btn-back" onclick="goTo('screen-setup-conditions')">Back</button>
+                            <button class="step-btn-next" onclick="goTo('screen-setup-day-timings')">Next</button>
                         </div>
+                    </div>
+                </section>
+                <!-- Section 4 -->
+                <section class="screen step-3-section" id="screen-setup-day-timings">
+                    <div class="step-3-selection">
+                        <!-- Top Text Content -->
+                        <div class="top-text-content">
+                            <div class="step-label-parent">
+                                <p class="step-label">STEP 3</p>
+                            </div>
+                            <div class="step-3-heading-parent">
+                                <h1 class="step-3-heading">When are you usually awake?</h1>
+                            </div>
+                            <div class="step-3-description-parent">
+                                <p class="step-3-description">This is used to calculate the best time you can go outside.</p>
+                            </div>
+                        </div>
+                        <!-- Timings -->
+                        <div class="step-3-form-inputs">
+                            <div class="step-3-form-row">
+                                <label class="step-3-field-label" for="wake-time">USUALLY UP AT</label>
+                                <input class="step-3-time-input" type="text" id="wake-time" placeholder="7:00 AM">
+                            </div>
+                            <div class="step-3-form-row">
+                                <label class="step-3-field-label" for="sleep-time">USUALLY ASLEEP BY</label>
+                                <input class="step-3-time-input" type="text" id="sleep-time" placeholder="10:00 PM">
+                            </div>
+                        </div>
+                        <!-- Back and Next Buttons -->
+                        <div class="step-3-selection-buttons">
+                            <button class="step-btn-back" onclick="goTo('screen-setup-location')">Back</button>
+                            <button class="step-btn-next" onclick="goTo('screen-setup-materials')">Next</button>
+                        </div>
+                    </div>
+                </section>
+                <!-- Section 4 -->
+                <section class="screen step-4-section" id="screen-setup-materials">
+                    <div class="step-4-selection">
+                        <!-- Top Text Content -->
+                        <div class="top-text-content">
+                            <div class="step-label-parent">
+                                <div class="step-label">STEP 4</div>
+                            </div>
+                            <div class="step-4-heading-parent">
+                                <h1 class="step-4-heading">What do you usually carry?</h1>
+                            </div>
+                            <div class="step-4-description-parent">
+                                <p class="step-4-description">We'll remind you on the days it matters — not every day.</p>
+                            </div>
+                        </div>
+                        <!-- FIND WAYS TO TAKE USER INPUTS ON THE STEP 1 FORM AND TURN THEM INTO TAILORED CHECKBOXES FOR ITEMS ACCORDING TO THEIR MEDICAL CONDITIONS -->
                     </div>
                 </section>
             </div>

@@ -41,7 +41,17 @@ document.addEventListener('click', (event) => {
     }
 });
 
-// Location Permission Request
+// Close the Hamburger Menu Automatically when Clicking on a Section
+
+document.getElementById('nav-links').addEventListener('click', (event) => {
+    const link = event.target.closest('a');
+
+    if (link) {
+        toggleMenu(false);
+    }
+});
+
+// Location Permission Request for Step 2
 
 function getLocation() {
     if (navigator.geolocation) {
