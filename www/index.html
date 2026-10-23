@@ -144,8 +144,9 @@
                             </label>
                         </div>
                         <!-- Next Button -->
+                        <p class="carry-error step-1-error" id="conditions-error" aria-live="polite"></p>
                         <div class="step-1-selection-button">
-                            <button class="step-1-btn-primary" onclick="goTo('screen-setup-location')">Next</button>
+                            <button class="step-1-btn-primary" onclick="nextFromConditions()">Next</button>
                         </div>
                     </div>
                 </section>
@@ -239,7 +240,22 @@
                                 <p class="step-4-description">We'll remind you on the days it matters — not every day.</p>
                             </div>
                         </div>
-                        <!-- FIND WAYS TO TAKE USER INPUTS ON THE STEP 1 FORM AND TURN THEM INTO TAILORED CHECKBOXES FOR ITEMS ACCORDING TO THEIR MEDICAL CONDITIONS -->
+                        <!-- Tailored Items (Built by script.js from the Step 1 Conditions) -->
+                        <div class="carry-groups" id="carry-groups"></div>
+                        <!-- Add Your Own Item -->
+                        <div class="carry-custom">
+                            <label class="carry-group-label" for="custom-item-name">ADD YOUR OWN</label>
+                            <input class="carry-input" type="text" id="custom-item-name" placeholder="e.g. epinephrine auto-injector" maxlength="40">
+                            <label class="carry-group-label" for="custom-item-trigger">REMIND ME&hellip;</label>
+                            <select class="carry-input carry-select" id="custom-item-trigger"></select>
+                            <p class="carry-error" id="custom-item-error" aria-live="polite"></p>
+                            <button class="carry-add-btn" type="button" onclick="addCustomItem()">Add item</button>
+                        </div>
+                        <!-- Back and Continue Buttons -->
+                        <div class="step-4-selection-buttons">
+                            <button class="step-btn-back" onclick="goTo('screen-setup-day-timings')">Back</button>
+                            <button class="step-btn-next" onclick="saveCarryItems()">Continue</button>
+                        </div>
                     </div>
                 </section>
             </div>
